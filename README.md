@@ -74,6 +74,13 @@ where region in ({{ dre_utils.column_values('sales', 'region', where='active') }
 The distinct values of a column as SQL literals, with the same `where`, `order_by`, `max` and
 `quote_values` as `pivot`.
 
+## `string_literal`
+
+`dre_utils.string_literal("O'Brien")` gives `'O''Brien'`, or `'O\'Brien'` on Databricks, which
+doesn't read `''` as an escaped quote (`'O''Brien'` is two literals there, joined into
+`OBrien`) and reads backslashes as escapes. `pivot` and `column_values` quote string values with
+it. Dispatched like `quote_identifier`.
+
 ## `quote_identifier`
 
 `dre_utils.quote_identifier('Order Date')` gives `"Order Date"`, or `` `Order Date` `` on

@@ -1,0 +1,5 @@
+queries:
+  - {query: seed_literal, tab: false}
+  - quotes_and_backslashes
+tags: [ok]
+output: {format: csv}
