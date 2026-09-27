@@ -1,12 +1,27 @@
-{#- A value as a SQL literal: strings quoted (with `'` doubled), numbers and booleans bare,
+{#- A value as a SQL literal: strings through `string_literal`, numbers and booleans bare,
     none as `null`. With `quote_values=false`, the value goes in as it is. -#}
 {% macro _literal(v, quote_values=true) -%}
 {%- if v is none -%}null
 {%- elif v is sameas true -%}true
 {%- elif v is sameas false -%}false
 {%- elif not quote_values or v is number -%}{{ v }}
-{%- else -%}'{{ v | string | replace("'", "''") }}'
+{%- else -%}{{ string_literal(v) }}
 {%- endif -%}
+{%- endmacro %}
+
+{#- string_literal(s): `s` as a string literal for the report's database. Dispatched: most
+    databases double a quote (`'O''Brien'`); Databricks reads `''` as two adjacent literals and
+    backslashes as escapes, so there both are escaped with a backslash (`'O\'Brien'`). -#}
+{% macro string_literal(s) -%}
+{{ dispatch('string_literal', 'dre_utils')(s) }}
+{%- endmacro %}
+
+{% macro default__string_literal(s) -%}
+'{{ s | string | replace("'", "''") }}'
+{%- endmacro %}
+
+{% macro databricks__string_literal(s) -%}
+'{{ s | string | replace("\\", "\\\\") | replace("'", "\\'") }}'
 {%- endmacro %}
 
 {#- The query behind `column_values` and `pivot(relation=...)`: one row more than `max`, so
