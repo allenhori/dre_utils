@@ -1,0 +1,6 @@
+o_id_x,o_region_x,o_month_x,o_amount_x,o_Note_x
+1,apac,2026-07,10.0,a
+2,apac,2026-08,20.0,b
+3,emea,2026-08,30.0,c
+4,,2026-07,40.0,d
+5,o'hare,2026-08,5.0,e

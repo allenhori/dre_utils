@@ -1,0 +1,5 @@
+queries:
+  - {query: seed_star_typo, tab: false}
+  - star_typo_q
+tags: [error]
+output: {format: csv}

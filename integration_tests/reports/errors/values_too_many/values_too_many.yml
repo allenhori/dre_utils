@@ -1,0 +1,5 @@
+queries:
+  - {query: seed_values_too_many, tab: false}
+  - values_too_many_q
+tags: [error]
+output: {format: csv}

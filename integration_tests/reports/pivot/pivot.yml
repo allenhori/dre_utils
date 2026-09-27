@@ -1,0 +1,11 @@
+queries:
+  - {query: seed_pivot, tab: false}
+  - pivot_sum
+  - pivot_avg
+  - pivot_count_nulls
+  - pivot_listed
+  - in_list
+  - exactly_max
+  - ordered
+tags: [ok]
+output: {format: csv}

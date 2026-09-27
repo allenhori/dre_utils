@@ -1,0 +1,5 @@
+queries:
+  - {query: seed_star_nothing, tab: false}
+  - star_nothing_q
+tags: [error]
+output: {format: csv}

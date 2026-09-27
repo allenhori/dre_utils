@@ -1,0 +1,5 @@
+queries:
+  - {query: seed_no_values, tab: false}
+  - no_values_q
+tags: [error]
+output: {format: csv}

@@ -1,0 +1,6 @@
+star_typo	dre_utils.star: `amout` in `except` isn't a column of orders; its columns are id, region, month, amount, Note, _etl_ts
+star_nothing	dre_utils.star: `except` leaves no columns of orders
+pivot_no_values	dre_utils.pivot: give the `values` to pivot on, or a `relation` to read them from
+too_many	dre_utils.pivot: `id` has more than 3 distinct values in orders; narrow it with `where=`, or raise `max=` if you really want that many
+values_too_many	dre_utils.column_values: `month` has more than 1 distinct values in orders
+no_values	dre_utils.pivot: `region` has no values in orders, so there's nothing to pivot

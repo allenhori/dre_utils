@@ -1,0 +1,9 @@
+queries:
+  - {query: seed_star, tab: false}
+  - star_plain
+  - star_except
+  - star_renamed
+  - star_unquoted
+  - star_ref
+tags: [ok]
+output: {format: csv}

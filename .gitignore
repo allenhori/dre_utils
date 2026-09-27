@@ -1,0 +1,3 @@
+integration_tests/target/
+integration_tests/logs/
+integration_tests/dre_deps/
