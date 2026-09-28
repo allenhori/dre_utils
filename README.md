@@ -13,7 +13,7 @@ Add the package to your project's `packages.yml` (or `dependencies.yml`) and run
 ```yaml
 packages:
   - git: https://github.com/allenhori/dre_utils.git
-    revision: v0.0.1-alpha-2    # a tag, branch or commit
+    revision: v0.0.1-alpha-3    # a tag, branch or commit
 ```
 
 Call its macros through the package's name: `{{ dre_utils.star(...) }}`.
