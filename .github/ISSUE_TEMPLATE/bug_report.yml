@@ -1,0 +1,39 @@
+name: Bug report
+description: Something in dre_utils doesn't work as it should
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead. Paste the full error.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: How to reproduce it
+      description: The smallest project that shows the problem (YAML and SQL), and the command you ran. Remove credentials and private data.
+      render: yaml
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: DRE version
+      description: The output of `dre --version`.
+    validations:
+      required: true
+  - type: input
+    id: package
+    attributes:
+      label: dre_utils revision and database
+      description: The `revision:` you install, and the database the report runs against.
+      placeholder: master, on Databricks
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system
+      placeholder: macOS 15 on Apple silicon
