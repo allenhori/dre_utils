@@ -94,6 +94,10 @@ runs its reports against an in-memory DuckDB and checks each output against `exp
 error case against `errors.txt`. It needs `dre` on the `PATH` (or `DRE=...`) and the DuckDB and
 csv plugins (`dre deps` in `integration_tests/` installs them).
 
+## Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md).
+
 ## License
 
 [Apache-2.0](LICENSE).

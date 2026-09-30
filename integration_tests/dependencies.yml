@@ -1,4 +1,3 @@
-sources: [duckdb]
-formats: [csv]
+plugins: [duckdb, csv]
 packages:
   - local: ..
