@@ -13,7 +13,7 @@ jobs:
       # The newest DRE release (pre-releases included), and the plugins the tests declare.
       - name: Install DRE
         run: |
-          curl -fsSL https://raw.githubusercontent.com/get-dre/dre/master/install.sh | DRE_INSTALL_DIR="$HOME/.local/bin" sh
+          curl -fsSL https://getdre.com/install.sh | DRE_INSTALL_DIR="$HOME/.local/bin" sh
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
       - name: Install plugins
         working-directory: integration_tests
