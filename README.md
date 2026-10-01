@@ -1,10 +1,10 @@
 # dre_utils
 
-Reusable macros for [DRE](https://github.com/allenhori/dre) reports: select all but a few columns,
+Reusable macros for [DRE](https://github.com/get-dre/dre) reports: select all but a few columns,
 and pivot values into columns, in SQL that works on any database DRE reads from.
 
 Dates and periods (`run.date.prev_month`, `period('mtd')`, timezones) are built into DRE itself;
-see [DRE's template docs](https://github.com/allenhori/dre/blob/master/docs/templates.md).
+see [DRE's template docs](https://github.com/get-dre/dre/blob/master/docs/templates.md).
 
 ## Install
 
@@ -12,7 +12,7 @@ Add the package to your project's `packages.yml` (or `dependencies.yml`) and run
 
 ```yaml
 packages:
-  - git: https://github.com/allenhori/dre_utils.git
+  - git: https://github.com/get-dre/dre_utils.git
     revision: v0.0.1-alpha-3    # a tag, branch or commit
 ```
 
